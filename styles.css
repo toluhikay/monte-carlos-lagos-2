@@ -1,0 +1,226 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* background: #c31516; */
+}
+body {
+  width: 100%;
+  font-family: sans-serif;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* header styles */
+.header {
+  padding: 20px 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  border-bottom: 0.5px solid #fff;
+  padding-bottom: 30px;
+}
+
+.logo-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-div img {
+  width: 250px;
+  height: auto;
+}
+.hamburger {
+  /* background-color: blue; */
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  display: none;
+  align-items: center;
+}
+.bar {
+  width: 100%;
+  height: 5px;
+  background-color: #c31516;
+}
+.navigation {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation-overlay {
+  display: none;
+}
+.close-nav {
+  display: none;
+}
+.navigation-ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+}
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-call-div {
+  display: flex;
+  justify-content: space-between;
+}
+.call-number p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.call-number p iconify-icon {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+.navigation-ul li a:hover {
+  color: #c31516;
+}
+/* media query for header */
+@media screen and (max-width: 1200px) {
+  .header {
+    padding: 20px 50px;
+  }
+  .navigation {
+    width: 60%;
+  }
+  .logo-div img {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .header-div {
+    flex-direction: column;
+  }
+  .close-nav {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2em;
+  }
+  .navigation-ul {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #c31516;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 70vw;
+    padding: 50px 10px;
+    transition: 0.3s linear;
+    justify-content: stretch;
+  }
+  .navigation-overlay {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100vw;
+    background-color: #c3151690;
+    transition: 0.3s linear;
+    display: flex;
+  }
+  .navigation-overlay iconify-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2em;
+  }
+  .hamburger {
+    display: block;
+  }
+  .show-overlay {
+    right: 0;
+  }
+  .show-navbar {
+    left: 0;
+  }
+  .navigation-ul li {
+    margin-bottom: 40px;
+  }
+}
+/* hero section */
+.hero {
+  padding: 200px 100px;
+  background-image: url("https://images.unsplash.com/photo-1590074721515-4e511fa59bcb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFyc2h5JTIwbGFuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-blend-mode: color-burn;
+  background-color: #01010199;
+}
+.hero-section {
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 100px;
+}
+.hero-section p {
+  font-size: 3.75rem;
+  margin-bottom: 30px;
+  width: 50%;
+  font-weight: bold;
+}
+.hero-section button {
+  background-color: #c31516;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  /* background-attachment: fixed; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* media query for hero */
+@media screen and (max-width: 1200px) {
+  .hero {
+    padding: 200px 50px;
+  }
+  .hero-section {
+    padding: 0;
+  }
+  .hero-section p {
+    font-size: 2.5rem;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-section p {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
