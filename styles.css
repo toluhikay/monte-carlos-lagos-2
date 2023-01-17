@@ -109,6 +109,9 @@ body {
   }
 }
 @media screen and (max-width: 770px) {
+  .header {
+    padding: 20px;
+  }
   .header-div {
     flex-direction: column;
   }
@@ -212,7 +215,7 @@ body {
 /* media query for hero */
 @media screen and (max-width: 1200px) {
   .hero {
-    padding: 200px 50px;
+    padding: 150px 50px;
   }
   .hero-section {
     padding: 0;
@@ -254,6 +257,7 @@ body {
   font-size: 2rem;
   margin-bottom: 50px;
   color: #c31516;
+  text-align: center;
 }
 .promo-div p span {
   color: #e9a92e;
@@ -308,5 +312,8 @@ body {
   .promo-button {
     width: 100%;
     justify-content: center;
+  }
+  .promo-div p {
+    font-size: 1.2rem;
   }
 }
