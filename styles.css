@@ -23,6 +23,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 30000;
 }
 .header-div {
   display: flex;
@@ -174,14 +175,19 @@ body {
 }
 /* hero section */
 .hero {
-  padding: 150px 100px;
-  background-image: url("https://images.unsplash.com/photo-1592595896551-12b371d546d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+  /* padding: 150px 100px; */
+  height: 500px;
+  background-image: url("./images/hero.jpg");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-blend-mode: color-burn;
   background-color: #01010199;
+  /* background-attachment: fixed; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero-section {
   width: 100%;
@@ -192,26 +198,39 @@ body {
   color: white;
   padding: 0 100px;
 }
-.hero-section p {
+.hero-p {
   font-size: 3.1rem;
   margin-bottom: 30px;
-  width: 50%;
+  /* width: 50%; */
   font-weight: bold;
+  color: #fff;
+}
+.epe-p {
+  font-size: 1em;
   color: #e9a92e;
 }
+.hero-section .hero-span-1 {
+  color: #c31516;
+}
+/* .hero-section .hero-span-2 {
+  color: #c31516;
+} */
 .hero-section button {
   background-color: #c31516;
   border: none;
   outline: none;
-  color: #e9a92e;
+  color: #fff;
   padding: 10px 30px;
   cursor: pointer;
   font-size: 1rem;
-  /* background-attachment: fixed; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.hero-section button:hover {
+  background-color: #e9a92e;
+}
+
 /* media query for hero */
 @media screen and (max-width: 1200px) {
   .hero {
@@ -275,8 +294,8 @@ body {
   align-items: center;
 }
 .promo-div-2 img {
-  width: 100%;
-  height: 200px;
+  width: 50%;
+  height: auto;
   object-fit: cover;
   margin-bottom: 50px;
 }
@@ -308,6 +327,11 @@ body {
     margin-bottom: 15px;
   }
 }
+@media screen and (max-width: 770px) {
+  .promo-div-2 img {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 500px) {
   .promo-button {
     width: 100%;
@@ -315,5 +339,123 @@ body {
   }
   .promo-div p {
     font-size: 1.2rem;
+  }
+}
+
+/* about section */
+.about,
+.about-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about-div {
+  padding: 100px;
+}
+.about-div-p {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.about-div-p2 {
+  text-align: center;
+  line-height: 2em;
+}
+
+/* features about stylea */
+.features-div {
+  width: 100%;
+  padding: 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.feature-div {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.feature-icon {
+  font-size: 50px;
+  color: #e9a92e;
+}
+.feature-p {
+  text-align: center;
+  color: #c31516;
+}
+/* about features media query */
+@media screen and (max-width: 900px) {
+  .about-div {
+    padding: 50px;
+  }
+  .about-div-p {
+    font-size: 2em;
+  }
+  .features-div {
+    padding: 50px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .about-div {
+    padding: 50px;
+  }
+  .about-div-p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .feature-div {
+    width: 48%;
+  }
+}
+
+/* three image div */
+.three-image-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+  flex-wrap: wrap;
+}
+.image-div {
+  width: 32%;
+  position: relative;
+  cursor: pointer;
+}
+.three-image-div img {
+  width: 100%;
+  border: 10px solid #f1f1f1;
+  box-shadow: 4px 4px 4px #c4c4c450;
+}
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #01010199;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+.image-div:hover .image-overlay {
+  opacity: 1;
+}
+
+/* three image media query */
+@media screen and (max-width: 900px) {
+  .three-image-div {
+    padding: 50px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .image-div {
+    width: 100%;
+    margin-bottom: 30px;
   }
 }
