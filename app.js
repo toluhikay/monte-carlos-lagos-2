@@ -14,6 +14,8 @@ closeNav.addEventListener("click", function () {
   overlayDiv.classList.contains("show-overlay") ? overlayDiv.classList.remove("show-overlay") : "";
 });
 
+window.addEventListener("scroll", function () {});
+
 window.addEventListener("DOMContentLoaded", () => {
   displayFeatures(featuresArray);
   displayThreeImages(ImageArray);
