@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
   </head>
   <body>
     <div class="container">
@@ -46,16 +47,6 @@
         </div>
       </header>
 
-      <!-- picture modal section -->
-      <section class="modal">
-        <div class="modal-div">
-          <iconify-icon class="close-modal" icon="ri:close-fill"></iconify-icon>
-          <div class="modal-image-div">
-            <img src="https://plus.unsplash.com/premium_photo-1661266884360-028764df3128?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmFja2dyb3VuZCUyMGltYWdlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="" class="modal-img" />
-          </div>
-        </div>
-      </section>
-
       <!-- hero section -->
       <section class="hero">
         <div class="hero-section">
@@ -63,7 +54,7 @@
             <p class="hero-p">A <span class="hero-span-1">Cosmopolitan</span> <span class="hero-span-2">Metropolis</span></p>
             <p class="epe-p">Epe Town, Lagos.</p>
           </div>
-          <button>Schedule a Visit <iconify-icon icon="ic:baseline-navigate-next"></iconify-icon></button>
+          <button class="schedule-button">Schedule a Visit <iconify-icon icon="ic:baseline-navigate-next"></iconify-icon></button>
         </div>
       </section>
 
@@ -71,11 +62,15 @@
       <section class="promo">
         <div class="promo-div">
           <p>Monte Carlo <span>Lagos</span></p>
-          <img src="./images/Front1.jpg" alt="" />
+          <img data-aos="zoom-in"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1500" src="./images/Front1.jpg" alt="" />
         </div>
 
         <div class="promo-div-2">
-          <img src="./images/map.jpg" alt="" />
+          <img data-aos="flip-up"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1500" src="./images/map.jpg" alt="" />
           <div class="promo-buttons">
             <button class="promo-button">Access Brochure <iconify-icon icon="ic:baseline-navigate-next"></iconify-icon></button>
             <button class="promo-button">Subscription Form <iconify-icon icon="ic:baseline-navigate-next"></iconify-icon></button>
@@ -102,15 +97,21 @@
       <!-- three image section -->
       <section class="three-image">
         <div class="three-image-div">
-          <div class="image-div">
+          <div data-aos="zoom-in"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1500" class="image-div">
             <img src="images/first.jpg" alt="" class="single-img" />
             <div class="image-overlay"></div>
           </div>
-          <div class="image-div">
+          <div data-aos="zoom-in"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1500" class="image-div">
             <img src="images/second.jpg" alt="" class="single-img" />
             <div class="image-overlay"></div>
           </div>
-          <div class="image-div">
+          <div data-aos="zoom-in"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1500" class="image-div">
             <img src="images/three.jpg" alt="" class="single-img" />
             <div class="image-overlay"></div>
           </div>
@@ -143,27 +144,27 @@
       <section class="clusters">
         <div class="clusters-div">
           <div class="cluster cluster-odd">
-            <div class="cluster-div1">
+            <div data-aos="fade-right" class="cluster-div1">
               <p>300sqm – N21,500,000 (All inclusive)</p>
             </div>
             <div class="cluster-div2">
-              <img src="https://tribitatrealestate.com/wp-content/uploads/2022/10/IMG-20221012-WA0011-min.jpg" alt="" />
+              <img data-aos="fade-left" src="https://tribitatrealestate.com/wp-content/uploads/2022/10/IMG-20221012-WA0011-min.jpg" alt="" />
             </div>
           </div>
           <div class="cluster cluster-even">
-            <div class="cluster-div1">
+            <div data-aos="fade-right" class="cluster-div1">
               <p>300sqm – N21,500,000 (All inclusive)</p>
             </div>
             <div class="cluster-div2">
-              <img src="https://tribitatrealestate.com/wp-content/uploads/2022/10/IMG-20221012-WA0011-min.jpg" alt="" />
+              <img data-aos="fade-left" src="https://tribitatrealestate.com/wp-content/uploads/2022/10/IMG-20221012-WA0011-min.jpg" alt="" />
             </div>
           </div>
           <div class="cluster cluster-odd">
-            <div class="cluster-div1">
+            <div data-aos="fade-right" class="cluster-div1">
               <p>300sqm – N21,500,000 (All inclusive)</p>
             </div>
             <div class="cluster-div2">
-              <img src="https://tribitatrealestate.com/wp-content/uploads/2022/10/IMG-20221012-WA0011-min.jpg" alt="" />
+              <img data-aos="fade-left" src="https://tribitatrealestate.com/wp-content/uploads/2022/10/IMG-20221012-WA0011-min.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -216,8 +217,68 @@
           <p class="copyright-p">copyrights © <span class="year"></span> Adozillion Homes and Realty Ltd- All Rights Reserved</p>
         </div>
       </footer>
+
+      <!-- inspection section form-->
+      <section class="inspection">
+        <div class="inspection-div">
+          <div class="overlay-div"></div>
+          <form action="" class="inspection-form">
+            <iconify-icon class="close-inspection-modal" icon="ri:close-fill"></iconify-icon>
+            <img src="./images/Front1.jpg">SCHEDULE AN INSPECTION</p>
+            <div class="form-div">
+              <div>
+                <label for="full-name">Full Name</label> <br />
+                <input type="text" id="full-name" />
+              </div>
+              <div>
+                <label for="full-name">Phone Number</label> <br />
+                <input type="tel" id="phone-number" />
+              </div>
+            </div>
+            <div class="form-div">
+              <div>
+                <label for="full-name">Email Address</label> <br />
+                <input type="email" id="email" />
+              </div>
+              <div>
+                <label for="full-name">Date</label> <br />
+                <input type="date" id="date" />
+              </div>
+            </div>
+            <div class="form-div">
+              <div>
+                <label for="full-name">Time</label> <br />
+                <input type="time" id="time" />
+              </div>
+              <div>
+                <label for="sumit">Submit Your Response</label> <br />
+                <button type="submit">Submit</button>
+              </div>
+            </div>
+            <p class="inspection-p2">
+              You can call us directly to Schedule an Inspection as well via
+              <br />
+              +2349155170650
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- picture modal section -->
+      <section class="modal">
+        <div class="modal-div">
+          <iconify-icon class="close-modal" icon="ri:close-fill"></iconify-icon>
+          <div class="modal-image-div">
+            <img src="" alt="" class="modal-img" />
+          </div>
+        </div>
+      </section>
     </div>
 
     <script src="./app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

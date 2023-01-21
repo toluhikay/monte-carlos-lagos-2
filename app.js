@@ -80,7 +80,6 @@ const modalImage = document.querySelector(".modal-img");
 images.forEach((image) => {
   image.addEventListener("click", function () {
     modal.classList.add("show-modal");
-    console.log(image);
     let firstChildSource = image.firstElementChild.src;
     modalImage.src = firstChildSource;
   });
@@ -88,4 +87,17 @@ images.forEach((image) => {
 
 closeModal.addEventListener("click", function () {
   modal.classList.contains("show-modal") ? modal.classList.remove("show-modal") : "";
+});
+
+// inspection logic
+const inspectionButton = document.querySelector(".schedule-button");
+const inspection = document.querySelector(".inspection");
+const closeInspection = document.querySelector(".close-inspection-modal");
+
+inspectionButton.addEventListener("click", function () {
+  inspection.classList.add("show-inspection");
+});
+
+closeInspection.addEventListener("click", function () {
+  inspection.classList.contains("show-inspection") ? inspection.classList.remove("show-inspection") : "";
 });
