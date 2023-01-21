@@ -755,7 +755,7 @@ body {
 /* modal styles */
 .modal-div {
   position: fixed;
-  top: -100%;
+  top: -200%;
   left: 0;
   bottom: 0;
   width: 100vw;
