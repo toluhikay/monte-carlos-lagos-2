@@ -3,6 +3,9 @@ const hamburger = document.querySelector(".hamburger");
 const ulNavigation = document.querySelector(".navigation-ul");
 const overlayDiv = document.querySelector(".navigation-overlay");
 const closeNav = document.querySelector(".close-nav");
+const header = document.querySelector(".header");
+const headerDiv = document.querySelector(".header-div");
+const hero = document.querySelector(".hero");
 
 hamburger.addEventListener("click", function () {
   ulNavigation.classList.toggle("show-navbar");
@@ -14,11 +17,24 @@ closeNav.addEventListener("click", function () {
   overlayDiv.classList.contains("show-overlay") ? overlayDiv.classList.remove("show-overlay") : "";
 });
 
-window.addEventListener("scroll", function () {});
+window.addEventListener("scroll", function () {
+  changeHeaderbg();
+});
+function changeHeaderbg() {
+  if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+    header.style.background = "#c31516";
+    header.style.transition = "all 1s ease-in-out";
+    // header.style.padding = "20px";
+    headerDiv.style.padding = "0px 0px";
+  } else {
+    header.style.background = "";
+    header.style.transition = "all 1s ease-in-out";
+  }
+}
 
 window.addEventListener("DOMContentLoaded", () => {
   displayFeatures(featuresArray);
-  displayThreeImages(ImageArray);
+  // displayThreeImages(ImageArray);
 });
 
 //about logic
@@ -56,16 +72,20 @@ const ImageArray = [
   { id: 2, img: "./images/second.jpg" },
   { id: 3, img: "./images/three.jpg" },
 ];
-const threeImageDiv = document.querySelector(".three-image-div");
-function displayThreeImages(images) {
-  let displayImagesDiv = images.map((item) => {
-    return `
-    <div class="image-div">
-      <img key=${item.id} src=${item.img} alt="" class="three-img">
-      <div class="image-overlay"></div>
-    </div>
-    `;
+const images = document.querySelectorAll(".image-div");
+const modal = document.querySelector(".modal-div");
+const closeModal = document.querySelector(".close-modal");
+const modalImage = document.querySelector(".modal-img");
+
+images.forEach((image) => {
+  image.addEventListener("click", function () {
+    modal.classList.add("show-modal");
+    console.log(image);
+    let firstChildSource = image.firstElementChild.src;
+    modalImage.src = firstChildSource;
   });
-  displayImagesDiv = displayImagesDiv.join("");
-  threeImageDiv.innerHTML = displayImagesDiv;
-}
+});
+
+closeModal.addEventListener("click", function () {
+  modal.classList.contains("show-modal") ? modal.classList.remove("show-modal") : "";
+});
