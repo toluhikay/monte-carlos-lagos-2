@@ -27,7 +27,7 @@ function changeHeaderbg() {
     // header.style.padding = "20px";
     headerDiv.style.padding = "0px 0px";
   } else {
-    header.style.background = "";
+    header.style.background = "inherit";
     header.style.transition = "all 1s ease-in-out";
   }
 }

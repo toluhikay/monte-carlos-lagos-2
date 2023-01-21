@@ -768,7 +768,7 @@ body {
   transition: all 0.3s linear;
 }
 .modal-image-div {
-  width: 100%;
+  width: 200%;
   height: 450px;
   max-width: 550px;
   background-color: #c31516;
@@ -779,6 +779,7 @@ body {
   object-fit: cover;
   z-index: 200000;
   border: 10px solid #e9a92e;
+  cursor: grab;
 }
 .show-modal {
   top: 0;
