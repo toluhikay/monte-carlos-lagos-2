@@ -74,6 +74,7 @@ const ImageArray = [
 ];
 const images = document.querySelectorAll(".image-div");
 const modal = document.querySelector(".modal-div");
+const plansButton = document.querySelector(".promo-plan");
 const closeModal = document.querySelector(".close-modal");
 const modalImage = document.querySelector(".modal-img");
 
@@ -85,16 +86,25 @@ images.forEach((image) => {
   });
 });
 
+plansButton.addEventListener("click", function () {
+  modal.classList.add("show-modal");
+  modalImage.src = "./images/Front1.jpg";
+});
+
 closeModal.addEventListener("click", function () {
   modal.classList.contains("show-modal") ? modal.classList.remove("show-modal") : "";
 });
 
 // inspection logic
 const inspectionButton = document.querySelector(".schedule-button");
+const inspectionButton2 = document.querySelector(".promo-inspect");
 const inspection = document.querySelector(".inspection");
 const closeInspection = document.querySelector(".close-inspection-modal");
 
 inspectionButton.addEventListener("click", function () {
+  inspection.classList.add("show-inspection");
+});
+inspectionButton2.addEventListener("click", function () {
   inspection.classList.add("show-inspection");
 });
 
