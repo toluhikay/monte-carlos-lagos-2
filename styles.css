@@ -804,6 +804,9 @@ body {
   height: 95%;
   max-height: 550px;
   max-width: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* background-color: #c31516; */
   /* object-fit: cover; */
 }
