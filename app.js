@@ -111,3 +111,28 @@ inspectionButton2.addEventListener("click", function () {
 closeInspection.addEventListener("click", function () {
   inspection.classList.contains("show-inspection") ? inspection.classList.remove("show-inspection") : "";
 });
+
+// layout
+const layoutImages = document.querySelectorAll(".layout-image");
+
+layoutImages.forEach((image) => {
+  image.addEventListener("click", function () {
+    modal.classList.add("show-modal");
+    modalImage.src = image.src;
+  });
+});
+
+// emailjs form submission
+// const templateParams = document.getElementById("inspection-form");
+// const serviceId = "service_ysstlmv";
+// const templateId = "template_j609mrb";
+// const publicKey = "7zjcfLAtMoggU1_n_";
+
+// emailjs.sendForm(serviceId, templateId, templateParams).then(
+//   function (response) {
+//     console.log("SUCCESS!", response.status, response.text);
+//   },
+//   function (error) {
+//     console.log("FAILED...", error);
+//   }
+// );
