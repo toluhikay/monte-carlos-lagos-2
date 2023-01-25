@@ -189,14 +189,13 @@ body {
 .hero {
   /* padding: 150px 100px; */
   height: 500px;
-  background-image: url("./images/hero.jpg");
+  background-image: url("./images/hero.png");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-blend-mode: color-burn;
   background-color: #01010199;
-  /* background-attachment: fixed; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,7 +203,6 @@ body {
 .hero-section {
   width: 100%;
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-between;
   align-items: center;
   color: white;
@@ -215,14 +213,14 @@ body {
   margin-bottom: 30px;
   /* width: 50%; */
   font-weight: bold;
-  color: #fff;
+  color: #c31516;
 }
 .epe-p {
   font-size: 1em;
   color: #e9a92e;
 }
 .hero-section .hero-span-1 {
-  color: #c31516;
+  color: #f1f1f1;
 }
 /* .hero-section .hero-span-2 {
   color: #c31516;
@@ -252,7 +250,7 @@ body {
   .hero-section {
     padding: 0;
   }
-  .hero-section p {
+  .hero-p {
     font-size: 2.5rem;
     width: 70%;
   }
@@ -262,10 +260,15 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .hero-p {
+    font-size: 2em;
+  }
   .hero-section p {
     width: 100%;
-    font-size: 1.5rem;
     text-align: center;
+  }
+  .epe-p {
+    font-size: 1.5em;
   }
 }
 
@@ -345,6 +348,7 @@ body {
   outline: none;
   cursor: pointer;
   width: 23%;
+  font-size: 0.8em;
 }
 .promo-button:hover {
   background-color: #e9a92e;
@@ -621,9 +625,10 @@ body {
   flex-direction: row-reverse;
 }
 .cluster-div2 img {
-  width: 80%;
+  width: 100%;
   height: 500px;
   border: 5px solid #fff;
+  object-fit: cover;
 }
 
 /* cluster media query */
@@ -656,6 +661,13 @@ body {
     margin-bottom: 30px;
     font-size: 1.2em;
     letter-spacing: 2px;
+    width: 100%;
+  }
+  .cluster-div1 p {
+    height: 100px;
+  }
+  .cluster-div2 img {
+    height: 300px;
   }
 }
 
@@ -944,7 +956,7 @@ body {
   }
   .inspection-form {
     overflow-y: auto;
-    padding-top: 300px;
+    padding-top: 400px;
     /* padding-bottom: 100px; */
   }
   .form-div {
