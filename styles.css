@@ -194,9 +194,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-blend-mode: color-burn;
-  background-color: #01010199;
+  /* background-blend-mode: color-burn; */
+  /* background-color: #01010199; */
   display: flex;
+  background-attachment: fixed;
   justify-content: center;
   align-items: center;
 }
