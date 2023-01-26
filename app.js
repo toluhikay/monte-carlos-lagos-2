@@ -122,17 +122,39 @@ layoutImages.forEach((image) => {
   });
 });
 
-// emailjs form submission
-// const templateParams = document.getElementById("inspection-form");
-// const serviceId = "service_ysstlmv";
-// const templateId = "template_j609mrb";
-// const publicKey = "7zjcfLAtMoggU1_n_";
-
-// emailjs.sendForm(serviceId, templateId, templateParams).then(
-//   function (response) {
-//     console.log("SUCCESS!", response.status, response.text);
-//   },
-//   function (error) {
-//     console.log("FAILED...", error);
-//   }
-// );
+// formspree
+let form = document.getElementById("inspection-form");
+async function handleSubmit(event) {
+  event.preventDefault();
+  let status = document.getElementById("my-form-status");
+  let data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        // modal.classList.add("show-modal");
+        status.innerHTML = "Thanks for your submission!";
+        swal("Here's the title!", "...and here's the text!");
+        form.reset();
+      } else {
+        response.json().then((data) => {
+          if (Object.hasOwn(data, "errors")) {
+            modal.classList.add("show-modal");
+            status.innerHTML = data["errors"].map((error) => error["message"]).join(", ");
+          } else {
+            modal.classList.add("show-modal");
+            status.innerHTML = "Oops! There was a problem submitting your form";
+          }
+        });
+      }
+    })
+    .catch((error) => {
+      status.innerHTML = "Oops! There was a problem submitting your form";
+    });
+}
+form.addEventListener("submit", handleSubmit);

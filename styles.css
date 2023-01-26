@@ -189,7 +189,7 @@ body {
 .hero {
   /* padding: 150px 100px; */
   height: 500px;
-  background-image: url("./images/hero.png");
+  background-image: url("./images/hero.webp");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -559,9 +559,6 @@ body {
   }
 }
 @media screen and (max-width: 770px) {
-  .map-section-div {
-    /* padding: 20px; */
-  }
   .monte-carlo-p1 {
     font-size: 1.7em;
   }
@@ -575,6 +572,15 @@ body {
     text-align: center;
     margin-bottom: 30px;
   }
+}
+/* banner */
+.banner {
+  width: 100%;
+  height: auto;
+}
+.banner img {
+  width: 100%;
+  height: auto;
 }
 
 /* clusters */
@@ -1000,4 +1006,7 @@ body {
     padding: 10px;
     font-size: 30px;
   }
+}
+.swal-modal {
+  z-index: 2000000000;
 }

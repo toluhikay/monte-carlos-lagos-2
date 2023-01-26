@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="images/favicon_io/site.webmanifest">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
@@ -114,6 +115,8 @@
         <div class="features-div"></div>
       </section>
 
+     
+
       <!-- three image section -->
       <section class="three-image">
         <div class="three-image-div">
@@ -136,7 +139,7 @@
             <div class="image-overlay"></div>
           </div>
         </div>
-      </section>
+      
 
       <!-- map section -->
       <section class="map">
@@ -160,6 +163,11 @@
           </div>
         </div>
       </section>
+    </section>
+    <!-- banner section -->
+    <section class="banner">
+     <img src="./images/banner.jpeg" alt="">
+   </section>
       <!-- clusters div -->
       <section class="clusters">
         <div class="clusters-div">
@@ -246,33 +254,33 @@
       <section class="inspection">
         <div class="inspection-div">
           <div class="overlay-div"></div>
-          <form action="" class="inspection-form" id="inspection-form">
+          <form action="https://formspree.io/f/xayzqwwn" method="post" class="inspection-form" id="inspection-form">
             <iconify-icon class="close-inspection-modal" icon="ri:close-fill"></iconify-icon>
             <img src="./images/Front1.jpg">SCHEDULE AN INSPECTION</p>
             <div class="form-div">
               <div>
                 <label for="full-name">Full Name</label> <br />
-                <input type="text" id="full-name" />
+                <input type="text" id="full-name" name="full-name"  required />
               </div>
               <div>
                 <label for="phone-number">Phone Number</label> <br />
-                <input type="tel" id="phone-number" />
+                <input type="tel" id="phone-number" name="phone-number"  required/>
               </div>
             </div>
             <div class="form-div">
               <div>
                 <label for="email">Email Address</label> <br />
-                <input type="email" id="email" />
+                <input type="email" id="email" name="email" required />
               </div>
               <div>
                 <label for="date">Date</label> <br />
-                <input type="date" id="date" />
+                <input type="date" id="date" name="date"  required/>
               </div>
             </div>
             <div class="form-div">
               <div>
                 <label for="time">Time</label> <br />
-                <input type="time" id="time" />
+                <input type="time" id="time" name="time"  required/>
               </div>
               <div>
                 <label for="sumit">Submit Your Response</label> <br />
@@ -294,6 +302,7 @@
           <iconify-icon class="close-modal" icon="ri:close-fill"></iconify-icon>
           <div class="modal-image-div">
             <img src="" alt="" class="modal-img" />
+            <p id="my-form-status" style="background-color: #c3151640; padding: 20px; color: #fff;"></p>
           </div>
         </div>
       </section>
@@ -306,41 +315,10 @@
       </section>
 
     
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
-    </script>
-
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-      (function(){
-        emailjs.init("7zjcfLAtMoggU1_n_");
-      })();
-    </script>
-    <script>
-      // listen to the form submission
-      document
-        .getElementById("inspection-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const serviceID = "service_ysstlmv";
-          const templateID = "template_j609mrb";
-
-          // send the email here
-          emailjs.sendForm(serviceID, templateID, this).then(
-            (response) => {
-              console.log("SUCCESS!", response.status, response.text);
-              alert("SUCCESS!");
-            },
-            (error) => {
-              console.log("FAILED...", error);
-              alert("FAILED...", error);
-            }
-          );
-        });
     </script>
 
   <script src="./app.js"></script>
