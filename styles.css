@@ -189,13 +189,13 @@ body {
 .hero {
   /* padding: 150px 100px; */
   height: 500px;
-  background-image: url("./images/hero.webp");
+  background-image: url("./images/hero.jpg");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  /* background-blend-mode: color-burn; */
-  /* background-color: #01010199; */
+  background-blend-mode: overlay;
+  background-color: #01010199;
   display: flex;
   background-attachment: fixed;
   justify-content: center;
