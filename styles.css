@@ -189,7 +189,7 @@ body {
 .hero {
   /* padding: 150px 100px; */
   height: 500px;
-  background-image: url("./images/hero.jpg");
+  background-image: url("./images/hero.jpeg");
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
