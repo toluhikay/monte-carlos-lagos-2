@@ -88,7 +88,7 @@ images.forEach((image) => {
 
 plansButton.addEventListener("click", function () {
   modal.classList.add("show-modal");
-  modalImage.src = "./images/Front1.jpg";
+  modalImage.src = "./images/Payments.jpg";
 });
 
 closeModal.addEventListener("click", function () {
